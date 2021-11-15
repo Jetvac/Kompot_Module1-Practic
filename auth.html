@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rocket</title>
+        <link rel="icon" href="public/favicon.ico" type="image/png">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+    <body id="auth">
+        <div class="container">
+            <p class="illustration-box">
+                <img id="illustration" src="img/Illustration.svg" alt="Иллюстрация бизнес-сферы">
+            </p>
+            
+            <div class="interactive-field">
+                <div class="interactive-field__dataio">
+                    <h4>Авторизация</h4>
+                    <div class="google-btn">
+                        <div class="google-icon-wrapper">
+                            <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                        </div>
+                        <p>Войти через Google</p>
+                    </div>
+                    <div class="separator">
+                        <hr>
+                        <span>Или через электронную почту</span>
+                    </div>
+                    <div class="user-data">
+                        <div>
+                            <p>Email</p>
+                            <input id="user-data__mail" type="text">
+                        </div>
+                        <div>
+                            <p>Пароль</p>
+                            <div class="password-input">
+                                <input type="password">
+                                <label>
+                                    <input type="checkbox">
+                                    <span></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-field__lose">
+                        <label class="input-field__remember">
+                            <input type="checkbox">
+                            <p>Запомнить меня</p>
+                        </label>
+                        <a href="pass-recovery.html">Забыли пароль?</a>
+                    </div>
+                    <input class="login-btn" type="button" value="Войти">
+                    <div class="input-field__lose__mobile">
+                        <a href="pass-recovery.html">Забыли пароль?</a>
+                    </div>
+                </div>    
+                <div class="interactive-field__alt">
+                    <p>Ещё нет аккаунта? <a href="reg.html">Зарегистрироваться</a></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
