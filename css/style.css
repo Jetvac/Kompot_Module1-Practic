@@ -234,9 +234,10 @@ img#illustration {
     height: 100%;
     background: url("../img/hide.svg") no-repeat;
 }
-/*.password-input label input[type="checkbox"]:checked ~ .password-input label span {
-    background: url(../src/images/clipart2178237.png) no-repeat;
-} */
+.password-input label input[type="checkbox"]:checked ~ span {
+    background: url(../img/unhide.svg) no-repeat;
+    top: calc(50% - 9.57px);
+} 
 
 
 .input-field__lose {
