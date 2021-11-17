@@ -24,33 +24,33 @@
                         <hr>
                         <span>Или через электронную почту</span>
                     </div>
-                    <div class="user-data">
+                    <form class="user-data">
                         <div>
                             <p>Email</p>
-                            <input id="user-data__mail" type="text">
+                            <input id="user-data__mail" type="text" required>
                         </div>
                         <div>
                             <p>Пароль</p>
                             <div class="password-input">
-                                <input type="password">
+                                <input type="password" required>
                                 <label>
                                     <input type="checkbox">
                                     <span></span>
                                 </label>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-field__lose">
-                        <label class="input-field__remember">
-                            <input type="checkbox">
-                            <p>Запомнить меня</p>
-                        </label>
-                        <a href="pass-recovery.html">Забыли пароль?</a>
-                    </div>
-                    <input class="login-btn" type="button" value="Войти">
-                    <div class="input-field__lose__mobile">
-                        <a href="pass-recovery.html">Забыли пароль?</a>
-                    </div>
+                        <div class="input-field__lose">
+                            <label class="input-field__remember">
+                                <input type="checkbox">
+                                <p>Запомнить меня</p>
+                            </label>
+                            <a href="pass-recovery.html">Забыли пароль?</a>
+                        </div>
+                        <div class="input-field__lose__mobile">
+                            <a href="pass-recovery.html">Забыли пароль?</a>
+                        </div>
+                        <input class="login-btn" type="submit" value="Войти">
+                    </form>
                 </div>    
                 <div class="interactive-field__alt">
                     <p>Ещё нет аккаунта? <a href="reg.html">Зарегистрироваться</a></p>

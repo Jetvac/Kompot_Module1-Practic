@@ -186,7 +186,7 @@ img#illustration {
     margin-bottom: 9px;
     margin-top: 0px;
 }
-.user-data input {
+.user-data input[type="password"], .user-data input[type="text"] {
     border: 2px solid #E8E9EB;
     border-radius: var(--border-radius);
     width: calc(100% - 4px - 16px - 2px);
@@ -258,6 +258,7 @@ img#illustration {
 }
 .input-field__remember p {
     color: #595F69;
+    margin: 0;
 }
 .input-field__lose a {
     color: #304FFD;
@@ -268,7 +269,7 @@ img#illustration {
 }
 
 
-@media screen and (max-width: 1680px) {
+@media screen and (max-width: 1024px) {
     .interactive-field__dataio {
         width: 320px;
     }
@@ -300,7 +301,7 @@ img#illustration {
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 375px) {
     .interactive-field__dataio {
         width: 252px;
     }

@@ -13,15 +13,15 @@
                         <img src="img/Lock.svg">
                     </p>
                     <h4>Изменение пароля</h4>
-                    <div class="user-data">
+                    <form class="user-data">
                         <div>
                             <p>Email</p>
-                            <input id="user-data__mail" type="text">
+                            <input id="user-data__mail" type="text" required>
                         </div>
                         <div>
                             <p>Новый пароль</p>
                             <div class="password-input">
-                                <input type="password">
+                                <input type="password" required>
                                 <label>
                                     <input type="checkbox">
                                     <span></span>
@@ -31,15 +31,15 @@
                         <div>
                             <p>Подтверждение пароля</p>
                             <div class="password-input">
-                                <input type="password">
+                                <input type="password"  required>
                                 <label>
                                     <input type="checkbox">
                                     <span></span>
                                 </label>
                             </div>
                         </div>
-                    </div> 
-                    <input class="login-btn" type="button" value="Изменить пароль">
+                        <input class="login-btn" type="submit" value="Изменить пароль">
+                    </form> 
                 </div>
                 <div class="interactive-field__alt">
                     <p>Обратно к <a href="auth.html">Авторизации</a></p>
