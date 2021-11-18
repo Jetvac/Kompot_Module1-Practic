@@ -4,6 +4,7 @@
         <title>Rocket</title>
         <link rel="icon" href="public/favicon.ico" type="image/png">
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     </head>
     <body id="reg">
         <div class="container">
@@ -23,39 +24,39 @@
                     <form class="user-data">
                         <div>
                             <p>ФИО</p>
-                            <input id="user-data__fullname" type="text" required>
+                            <input id="user-data__fullname" type="text" required placeholder="Regina Cooper">
                         </div>
                         <div>
                             <p>Email</p>
-                            <input id="user-data__mail" type="text" required>
+                            <input id="user-data__mail" type="email" required placeholder="cooper@example.com">
                         </div>
                         <div>
                             <p>Пароль</p>
-                            <div class="password-input">
-                                <input type="password" required>
+                            <div class="password-data">
+                                <input id="password-data__input" type="password" required placeholder="········">
                                 <label>
-                                    <input type="checkbox">
+                                    <input onclick="switchPassVisibility('password-data__input')" type="checkbox">
                                     <span></span>
                                 </label>
                             </div>
                         </div>
                         <div>
                             <p>Подтверждение пароля</p>
-                            <div class="password-input">
-                                <input type="password" required>
+                            <div class="password-data">
+                                <input id="password-data__input__confirmation" type="password" required placeholder="········">
                                 <label>
-                                    <input type="checkbox">
+                                    <input onclick="switchPassVisibility('password-data__input__confirmation')" type="checkbox">
                                     <span></span>
                                 </label>
                             </div>
                         </div>
                         <div class="input-field__lose">
                             <label class="input-field__remember">
-                                <input type="checkbox">
+                                <input required type="checkbox">
                                 <p>Принимаю условия <a>Политики конфиденциальности</a></p>
                             </label>
                         </div>
-                        <input class="login-btn" type="submit" value="Зарегистрироваться">
+                        <input class="login-btn" onclick="regSubmit()" type="submit" value="Зарегистрироваться">
                     </form>
                 </div>
                 <div class="interactive-field__alt">
@@ -63,5 +64,9 @@
                 </div>
             </div>
         </div>
+
+        <script src="./js/passwordCompare.js"></script>
+        <script src="./js/regSubmit.js"></script>
+        <script src="./js/switchPassVisibility.js"></script>
     </body>
 </html>

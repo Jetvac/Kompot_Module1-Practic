@@ -17,8 +17,12 @@ body#pass-rec {
 body#pass-chg {
     background-color: #E9F3F5;
 }
+a {
+    color: #304FFD;
+    text-decoration: none;
+}
 a:hover {
-    color: #5065d8;
+    color: #5167e2;
 }
     
 
@@ -129,10 +133,16 @@ img#illustration {
     background: #E8E9EB;
     transition: all 150ms ease-in;
 }
+.google-btn:active {
+    background: #eeeef0;
+    transition: all 150ms ease-in;
+    box-shadow: 0px 5px 5px #bbbdc2; 
+}
 
 
 .login-btn {
     background: #304FFD;
+    transition: all 150ms ease-in;
     color: #FFFFFF;
     border: none;
     border-radius: var(--border-radius);
@@ -145,7 +155,13 @@ img#illustration {
     height: 40px;
 }
 .login-btn:hover {
-    background: #5065d8;
+    background: #5167e2;
+    transition: all 150ms ease-in;
+}
+.login-btn:active {
+    background: #5b71f0;
+    transition: all 150ms ease-in;
+    box-shadow: 0px 5px 5px #bbbdc2; 
 }
 
 
@@ -186,7 +202,7 @@ img#illustration {
     margin-bottom: 9px;
     margin-top: 0px;
 }
-.user-data input[type="password"], .user-data input[type="text"] {
+.user-data input[type="password"], .user-data input[type="text"], .user-data input[type="email"] {
     border: 2px solid #E8E9EB;
     border-radius: var(--border-radius);
     width: calc(100% - 4px - 16px - 2px);
@@ -195,6 +211,7 @@ img#illustration {
     font-style: normal;
     font-weight: 300;
     padding-left: 16px;
+    caret-color: transparent;
 }
 .user-data div {
     width: 100%;
@@ -202,10 +219,10 @@ img#illustration {
 }
 
 
-.password-input {
+.password-data {
     position: relative;
 }
-.password-input input[type="password"] {
+.password-data input[type="password"] {
     font-weight: 500;
     font-size: 40px;
     line-height: 60px;
@@ -213,8 +230,9 @@ img#illustration {
     color: #3F434A;
     width: calc(100% - 48px - 16px - 4px);
     padding-right: 48px;
+    caret-color: transparent;
 }
-.password-input label{
+.password-data label{
     cursor: pointer;
     width: 16px;
     height: 16px;
@@ -222,10 +240,10 @@ img#illustration {
     top: calc(50% - 8px);
     right: 16px;
 }
-.password-input label input[type="checkbox"] {
+.password-data label input[type="checkbox"] {
     display: none;
 }
-.password-input label span {
+.password-data label span {
     position: absolute;
     display: block;
     top: calc(50% - 3.25px);
@@ -234,7 +252,7 @@ img#illustration {
     height: 100%;
     background: url("../img/hide.svg") no-repeat;
 }
-.password-input label input[type="checkbox"]:checked ~ span {
+.password-data label input[type="checkbox"]:checked ~ span {
     background: url(../img/unhide.svg) no-repeat;
     top: calc(50% - 9.57px);
 } 
@@ -270,7 +288,7 @@ img#illustration {
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1680px) {
     .interactive-field__dataio {
         width: 320px;
     }
@@ -302,12 +320,13 @@ img#illustration {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 680px) {
     .interactive-field__dataio {
         width: 252px;
     }
     body#auth .input-field__lose__mobile {
-        display: block;
+        display: flex;
+        justify-content: center;
     }
     body#auth .input-field__lose a {
         display: none;

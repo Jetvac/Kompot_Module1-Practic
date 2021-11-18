@@ -4,6 +4,7 @@
         <title>Rocket</title>
         <link rel="icon" href="public/favicon.ico" type="image/png">
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     </head>
     <body id="auth">
         <div class="container">
@@ -27,14 +28,14 @@
                     <form class="user-data">
                         <div>
                             <p>Email</p>
-                            <input id="user-data__mail" type="text" required>
+                            <input id="user-data__mail" type="email" required placeholder="cooper@example.com">
                         </div>
                         <div>
                             <p>Пароль</p>
-                            <div class="password-input">
-                                <input type="password" required>
+                            <div class="password-data">
+                                <input id="password-data__input" type="password" required placeholder="········">
                                 <label>
-                                    <input type="checkbox">
+                                    <input onclick="switchPassVisibility('password-data__input')" type="checkbox">
                                     <span></span>
                                 </label>
                             </div>
@@ -57,5 +58,7 @@
                 </div>
             </div>
         </div>
+
+        <script src="./js/switchPassVisibility.js"></script>
     </body>
 </html>
