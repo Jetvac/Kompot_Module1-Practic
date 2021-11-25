@@ -104,7 +104,6 @@ img#illustration {
 .google-btn {
     display: flex;
     align-items: center;
-    position: relative;
     width: calc(100% - 4px);
     height: 40px;
 
@@ -114,6 +113,7 @@ img#illustration {
 }
 .google-btn p {
     margin: auto;
+    padding-right: 19px;
     user-select: none;
     font-weight: 500;
     font-size: 15px;
@@ -121,7 +121,6 @@ img#illustration {
     color: #595F69;
 }
 .google-icon-wrapper {
-    position: absolute;
     margin-left: 14px;
     height: 16px;
 }
