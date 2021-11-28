@@ -98,7 +98,7 @@ img#illustration {
     margin-top: auto;
     margin-bottom: auto;
 }
-.interactive-field__alt {
+.guide-field {
     margin-top: auto;
     margin-bottom: 8px;
     color: #8A9099;
@@ -198,6 +198,9 @@ img#illustration {
     color: #304FFD;
 }
 
+.input-field__lose__mobile {
+    display: none;
+}
 
 @media screen and (max-width: 1680px) {
     .interactive-field__dataio {
