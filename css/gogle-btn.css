@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+
+/* Style */
+.google-btn {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 4px);
+    height: 40px;
+
+    border: 2px solid #E8E9EB;
+    border-radius: var(--border-radius);
+    transition: all 150ms ease-in;
+}
+.google-btn p {
+    margin: auto;
+    padding-right: 19px;
+    user-select: none;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+    color: #595F69;
+}
+.google-icon-wrapper {
+    margin-left: 14px;
+    height: 16px;
+}
+.google-icon-wrapper img {
+    user-select: none;
+    width: 15px;
+}
+
+/* Events */
+.google-btn:hover {
+    background: #E8E9EB;
+    transition: all 150ms ease-in;
+}
+.google-btn:active {
+    background: #eeeef0;
+    transition: all 150ms ease-in;
+    box-shadow: 0px 5px 5px #bbbdc2; 
+}

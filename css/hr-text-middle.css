@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+
+/* Style */
+.hr-text-middle {
+    position: relative;
+    display: flex;
+    width: 100%;
+    opacity: 0.6;
+    margin: 15px 0px 15px 0px;
+}
+.hr-text-middle hr {
+    position: absolute;
+    width: calc(100% - 2px);
+    border: none;
+    border-top: 2px solid #E8E9EB;
+}
+.hr-text-middle span {
+    margin: auto;
+    z-index: 1;
+    background: white;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #8A9099;
+    padding: 0 0.75rem 0 0.75rem;
+}
