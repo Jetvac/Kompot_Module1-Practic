@@ -4,7 +4,7 @@
 /* Style */
 .login-btn {
     background: #304FFD;
-    transition: all 150ms ease-in;
+    transition: all 250ms ease-in;
     box-shadow: 0px 2px 2px #1d34b6;
     color: #FFFFFF;
     border: none;
@@ -20,7 +20,7 @@
 /* Events */
 .login-btn:hover {
     background: #5167e2;
-    transition: all 150ms ease-in;
+    transition: all 250ms ease-in;
 }
 .login-btn:active {
     background: #5b71f0;

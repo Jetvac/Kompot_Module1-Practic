@@ -23,9 +23,12 @@ body#pass-chg {
 a {
     color: #304FFD;
     text-decoration: none;
+    transition: all 0.3s;
 }
 a:hover {
-    color: #5167e2;
+    color: #6278f3;
+    text-decoration: underline;
+    transition: all 0.3s;
 }
     
 
