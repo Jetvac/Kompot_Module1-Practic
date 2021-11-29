@@ -11,13 +11,7 @@ body {
 body#auth {
     background-color: #304FFD;
 }
-body#reg {
-    background-color: #E9F3F5;
-}
-body#pass-rec {
-    background-color: #E9F3F5;
-}
-body#pass-chg {
+body#reg, body#pass-chg, body#pass-rec {
     background-color: #E9F3F5;
 }
 a {
@@ -127,6 +121,7 @@ img#illustration {
     height: 40px;
     font-family: 'Stem';
     font-style: normal;
+    outline: none;
     font-weight: 300;
     padding-left: 16px;
     caret-color: transparent;
@@ -142,9 +137,10 @@ img#illustration {
 }
 .password-data input[type="password"] {
     font-weight: 500;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 60px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
+    outline: none;
     color: #3F434A;
     width: calc(100% - 48px - 16px - 4px);
     padding-right: 48px;
