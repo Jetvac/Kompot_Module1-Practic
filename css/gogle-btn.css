@@ -3,6 +3,7 @@
 
 /* Style */
 .google-btn {
+    cursor: pointer;
     display: flex;
     align-items: center;
     width: calc(100% - 4px);

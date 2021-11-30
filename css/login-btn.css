@@ -3,6 +3,7 @@
 
 /* Style */
 .login-btn {
+    cursor: pointer;
     background: #304FFD;
     transition: all 250ms ease-in;
     box-shadow: 0px 2px 2px #1d34b6;

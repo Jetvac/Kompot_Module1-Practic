@@ -156,6 +156,7 @@ img#illustration {
 }
 .password-data label input[type="checkbox"] {
     display: none;
+    cursor: pointer;
 }
 .password-data label span {
     position: absolute;
@@ -179,6 +180,7 @@ img#illustration {
     width: 100%;
 }
 .input-field__remember {
+    cursor: pointer;
     user-select: none;
     display: flex;
     align-items: center;
