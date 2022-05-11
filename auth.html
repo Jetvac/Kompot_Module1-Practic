@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/gogle-btn.css" type="text/css">
         <link rel="stylesheet" href="css/login-btn.css" type="text/css">
         <link rel="stylesheet" href="css/hr-text-middle.css" type="text/css">
+        <script src="./jquery-3.6.0.js"></script>
     </head>
     <body id="auth">
         <div class="container">
@@ -19,16 +20,6 @@
             <div class="interactive-field">
                 <div class="interactive-field__dataio">
                     <h4>Авторизация</h4>
-                    <div class="google-btn">
-                        <div class="google-icon-wrapper">
-                            <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
-                        </div>
-                        <p>Войти через Google</p>
-                    </div>
-                    <div class="hr-text-middle">
-                        <hr>
-                        <span>Или через электронную почту</span>
-                    </div>
                     <form class="user-data">
                         <div>
                             <p>Email</p>
@@ -45,13 +36,9 @@
                             </div>
                         </div>
                         <div class="input-field__lose">
-                            <label class="input-field__remember">
-                                <input type="checkbox">
-                                <p>Запомнить меня</p>
-                            </label>
                             <a href="pass-recovery.html">Забыли пароль?</a>
                         </div>
-                        <input class="login-btn" type="submit" value="Войти">
+                        <input class="login-btn" type="button" value="Войти" onclick="Login()">
                         <div class="input-field__lose__mobile">
                             <a href="pass-recovery.html">Забыли пароль?</a>
                         </div>
@@ -64,5 +51,24 @@
         </div>
 
         <script src="./js/switchPassVisibility.js"></script>
+        <script>
+            let API_URL = "https://localhost:7119/";
+
+            function Login()
+            {
+                let login = document.getElementById('user-data__mail').value;
+                let password = document.getElementById('password-data__input').value;
+
+                var user = {Email: login, Password: password};
+
+                $.ajax({
+                    type: "GET",
+                    url: `${API_URL}Home/Login?email=${login}&Password=${password}`,
+                    success: function (response) {
+                        window.location.href = "user-data.html";
+                    }
+                });
+            }
+        </script>
     </body>
 </html>

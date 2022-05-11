@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rocket</title>
+        <link rel="icon" href="public/favicon.ico" type="image/png">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+        <link rel="stylesheet" href="css/gogle-btn.css" type="text/css">
+        <link rel="stylesheet" href="css/login-btn.css" type="text/css">
+        <link rel="stylesheet" href="css/hr-text-middle.css" type="text/css">
+        <script src="./jquery-3.6.0.js"></script>
+    </head>
+    <body id="reg">
+        <div class="container">
+            <div class="interactive-field">
+                <p id="FirstName"></p>
+                <p id="SecondName"></p>
+                <p id="LastName"></p>
+                <input class="login-btn" type="button" value="Выйти" onclick="nav()">
+            </div>
+        </div>
+
+        <script>
+            let API_URL = "https://localhost:7119/";
+
+            function nav()
+            {
+                window.location.href = "auth.html";
+            }
+
+            function RecClick()
+            {
+                password = document.getElementById('password-data__input');
+                confirmationPassword = document.getElementById('password-data__input__confirmation');
+                fullname = document.getElementById('user-data__fullname'.value);
+
+                if(password.value != confirmationPassword.value){
+                    alert("Пароли не совпадают!");
+                    return false;
+                }
+
+                let login = document.getElementById('user-data__mail').value;
+
+                $.ajax({
+                    type: "GET",
+                    url: `${API_URL}Home/Registration?email=${login}&Password=${password.value}&FullName=${fullname}`,
+                    success: function (response) {
+                        if (response == 200) {
+                            alert("Вы успешно зарегистрированы!");
+                        } else {
+                            alert("Указанный почтовый адрес зарегистрирован!");
+                        }
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

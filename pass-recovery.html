@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">
 
         <link rel="stylesheet" href="css/login-btn.css" type="text/css">
+        <script src="./jquery-3.6.0.js"></script>
     </head>
     <body id="pass-rec">
         <div class="container">
@@ -20,7 +21,7 @@
                             <p>Email</p>
                             <input id="user-data__mail" type="email" required placeholder="cooper@example.com">
                         </div>
-                        <input class="login-btn" type="submit" value="Восстановить пароль">
+                        <input class="login-btn" type="button" value="Восстановить пароль" onclick="RecClick()">
                     </form>
                 </div>
                 <div class="interactive-field__alt">
@@ -28,5 +29,24 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            let API_URL = "https://localhost:7119/";
+
+            function RecClick()
+            {
+                let login = document.getElementById('user-data__mail').value;
+
+                $.ajax({
+                    type: "GET",
+                    url: `${API_URL}Home/PassRec?email=${login}`,
+                    success: function (response) {
+                        if (response == 200) {
+                            window.location.href = "pass-change.html";
+                        }
+                    }
+                });
+            }
+        </script>
     </body>
 </html>

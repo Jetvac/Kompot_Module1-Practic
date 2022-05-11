@@ -9,22 +9,13 @@
         <link rel="stylesheet" href="css/gogle-btn.css" type="text/css">
         <link rel="stylesheet" href="css/login-btn.css" type="text/css">
         <link rel="stylesheet" href="css/hr-text-middle.css" type="text/css">
+        <script src="./jquery-3.6.0.js"></script>
     </head>
     <body id="reg">
         <div class="container">
             <div class="interactive-field">
                 <div class="interactive-field__dataio">
                     <h4>Регистрация</h4>
-                    <div class="google-btn">
-                        <div class="google-icon-wrapper">
-                            <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
-                        </div>
-                        <p>Войти через Google</p>
-                    </div>
-                    <div class="hr-text-middle">
-                        <hr>
-                        <span>Или через электронную почту</span>
-                    </div>
                     <form class="user-data">
                         <div>
                             <p>ФИО</p>
@@ -60,7 +51,7 @@
                                 <p>Принимаю условия <a>Политики конфиденциальности</a></p>
                             </label>
                         </div>
-                        <input class="login-btn" onclick="regSubmit()" type="submit" value="Зарегистрироваться">
+                        <input class="login-btn" onclick="RecClick()" type="button" value="Зарегистрироваться">
                     </form>
                 </div>
                 <div class="interactive-field__alt">
@@ -72,5 +63,34 @@
         <script src="./js/passwordCompare.js"></script>
         <script src="./js/regSubmit.js"></script>
         <script src="./js/switchPassVisibility.js"></script>
+        <script>
+            let API_URL = "https://localhost:7119/";
+
+            function RecClick()
+            {
+                password = document.getElementById('password-data__input');
+                confirmationPassword = document.getElementById('password-data__input__confirmation');
+                fullname = document.getElementById('user-data__fullname'.value);
+
+                if(password.value != confirmationPassword.value){
+                    alert("Пароли не совпадают!");
+                    return false;
+                }
+
+                let login = document.getElementById('user-data__mail').value;
+
+                $.ajax({
+                    type: "GET",
+                    url: `${API_URL}Home/Registration?email=${login}&Password=${password.value}&FullName=${fullname}`,
+                    success: function (response) {
+                        if (response == 200) {
+                            alert("Вы успешно зарегистрированы!");
+                        } else {
+                            alert("Указанный почтовый адрес зарегистрирован!");
+                        }
+                    }
+                });
+            }
+        </script>
     </body>
 </html>

@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
         <link rel="stylesheet" href="css/login-btn.css" type="text/css">
+        <script src="./jquery-3.6.0.js"></script>
     </head>
     <body id="pass-chg">
         <div class="container">
@@ -41,7 +42,7 @@
                                 </label>
                             </div>
                         </div>
-                        <input class="login-btn" type="submit" value="Изменить пароль">
+                        <input class="login-btn" type="button" value="Изменить пароль" onclick="RecClick()">
                     </form> 
                 </div>
                 <div class="interactive-field__alt">
@@ -53,5 +54,34 @@
         <script src="./js/passwordCompare.js"></script>
         <script src="./js/regSubmit.js"></script>
         <script src="./js/switchPassVisibility.js"></script>
+
+
+        <script>
+            let API_URL = "https://localhost:7119/";
+
+            function RecClick()
+            {
+                password = document.getElementById('password-data__input');
+                confirmationPassword = document.getElementById('password-data__input__confirmation');
+
+                if(password.value != confirmationPassword.value){
+                    return false;
+                }
+
+                let login = document.getElementById('user-data__mail').value;
+
+                $.ajax({
+                    type: "GET",
+                    url: `${API_URL}Home/PassChg?email=${login}&password=${password.value}`,
+                    success: function (response) {
+                        if (response == 200) {
+                            alert("Вы успешно изменили свои учётные данные!");
+                        } else {
+                            alert("Аккаунт не найден!");
+                        }
+                    }
+                });
+            }
+        </script>
     </body>
 </html>
